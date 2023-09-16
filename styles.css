@@ -1,110 +1,119 @@
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #86c8f8, #5280f3);
-    text-align: center;
-    height: 100vh;
-    
-  }
-  h1 {
-    color: rgba(255, 255, 255, 0.297);
-    text-shadow: 0 1px 10px white;
-  }
-  #mn {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(10px);
-    border: 2px solid white;
-    top: 50%;
-    left: 50%;
-    border-style: hidden;
-    box-shadow: 0 1px 10px white;
-    border-radius: 9px;
-    background: rgba(255, 255, 255, 0.1);
-   
-    
-  }
-  .container {
-    background-color: rgba(255, 255, 255, 0); 
-    backdrop-filter: blur(10px); 
-    margin: 20px auto;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 1px 10px rgb(219, 219, 219);
+:root {
+  --white: rgba(255, 255, 255, 0.256);
+  --off-white: #eeeeee;
+  --transp-white-1: rgba(255, 255, 255, 0.738);
+  --transp-white-2: rgba(190, 184, 184, 0.081);
+  --shadow: rgba(255, 255, 255, 0.082);
 }
 
-#form {
-    margin: 50px 0;
-    
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-image: url("https://images.hdqwalls.com/download/aurora-northern-lights-4k-hh-1920x1080.jpg");
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.296);
+}
+#mn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid var(--white);
+  text-align: center;
+  filter: blur(1px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
+}
+
+#mn:hover {
+  transform: translate(-50%, -50%) rotate(0deg);
+  box-shadow: 0 1.8em 3.7em var(--shadow);
+  filter: blur(0px);
+  text-shadow: none;
+ 
+}
+#mn:hover h1 { 
+  color: rgb(0, 0, 0);
 }
 
 #input {
-    padding: 1px;
-    width:  150px;
-    border-style: none;
-    box-shadow: 0 1px 10px white;
-    background-color: rgb(255, 255, 255);
-    
+  padding: 1px;
+  width: 30%;
+  border-style: none;
+
+  background-color: var(--white);
+  
 }
 
 button {
-    padding: 1px 5px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;
-    border-radius: 99999999px;
-    border-style: hidden;
-    margin-left: 10px;
-    margin-right: 10px;
+  padding: 1px 5px;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  border-radius: 99999999px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #toggles {
-    margin-left: 10px;
-    border: none;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border-style: hidden ;
-    border-radius: 99999999px;
-   
+  margin-left: 10px;
+  background-color: var(--white);
+  border-radius: 99999999px;
 }
 
 #display {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 400px;
-    box-shadow: 0 1px 10px rgb(250, 250, 250);
-
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  max-width: 400px;
+  background-color: var(--white);
 }
 
 #bookmarks {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 1px 10px rgb(219, 219, 219);
+  width: 50%;
+
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  max-height: 400px;
+  box-shadow: 0 1px 10px rgb(219, 219, 219);
 }
+#reload {
+  margin-left: 80%;
+}
+
 .drop {
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    opacity: 10%;
-    border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .drop1 {
-    margin-top: 10%;
-    margin-left: 80%;
-    height: 200px; 
-    width: 200px; 
+  margin-top: 10%;
+  margin-left: 80%;
+  height: 200px;
+  width: 200px;
+  filter: blur(2px);
 }
 
 .drop2 {
-    margin-top: 110px;
-    margin-left: -100px;
-    height: 150px; 
-    width: 150px; 
+  margin-top: 110px;
+  margin-left: -100px;
+  height: 150px;
+  width: 150px;
+  filter: blur(1px);
+}
+.drop3 {
+  margin-top: -200px;
+  margin-left: -100px;
+  height: 200px;
+  width: 200px;
 }
